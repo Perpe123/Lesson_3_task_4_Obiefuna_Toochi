@@ -1,52 +1,290 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
 }
 
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
 
 body {
-	line-height: 1;
+    line-height: 1;
 }
 
-ol, ul {
-	list-style: none;
+ol,
+ul {
+    list-style: none;
 }
 
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+    quotes: none;
 }
 
-blockquote::before, blockquote::after,
-q::before, q::after {
-	content: '';
-	content: none;
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+    content: "";
+    content: none;
 }
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /* Do not write a css rule above here! Use the space below  */
 
-
 /* Write your css below here */
+
+.container {
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: rgb(250 243 243);
+    height: 70px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+header .head {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    text-decoration: none;
+    color: rgb(63 54 54);
+    font-size: 20px;
+    margin-left: 5px;
+    border-right: solid 1px rgb(63 54 54);
+    padding-right: 3px;
+}
+
+header nav a:hover {
+    opacity: 0.6;
+}
+
+main {
+    margin-top: 70px;
+    padding: 25px;
+    background: rgb(194 152 152);
+}
+
+header img {
+    height: 32px;
+    width: 32px;
+}
+
+.head h1 {
+    font-size: 25px;
+}
+
+.section-text {
+    background-image: url("../images/food_image_2-removebg-preview.png");
+    background-repeat: no-repeat;
+    height: 250px;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+aside h2 {
+    color: rgb(70 4 4);
+    font-size: 30px;
+    padding: 1rem;
+}
+
+.section-text h2 {
+    font-size: 30px;
+    color: #fff;
+}
+
+section h3 {
+    margin: 40px 0;
+    color: rgb(70 4 4);
+    font-size: 30px;
+}
+
+section p {
+    margin: 20px 0;
+    line-height: 1.5;
+    padding-bottom: 40px;
+}
+
+aside {
+    border-top: solid 1px rgb(156 128 128);
+}
+
+aside div:nth-of-type(1) a {
+    color: rgb(255 252 252);
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+aside div:nth-of-type(1) a:hover {
+    color: #8d7575;
+}
+
+footer {
+    background-color: grey;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+footer p:nth-of-type(1) {
+    font-size: 25px;
+    color: rgb(70 4 4);
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        display: flex;
+    }
+
+    section {
+        width: 70%;
+        padding: 0;
+    }
+
+    aside {
+        width: 30%;
+        margin-top: 2rem;
+        padding: 1rem 0;
+        border-left: solid 1px rgb(156 128 128);
+        border-top: none;
+    }
+
+    .section-text {
+        width: 500px;
+        height: 350px;
+        margin: auto;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header nav {
+        margin-right: 30px;
+    }
+
+    header .head {
+        margin-left: 20px;
+    }
+}
