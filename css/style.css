@@ -131,8 +131,11 @@ table {
 
 /* Write your css below here */
 
-.container {
+*{
     box-sizing: border-box;
+}
+
+.container {
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
@@ -140,11 +143,15 @@ table {
 
 header {
     background-color: rgb(250 243 243);
-    height: 70px;
+    height: 80px;
     width: 100vw;
     position: fixed;
     top: 0;
     left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
 }
 
 header .head {
@@ -156,7 +163,7 @@ header nav a {
     text-decoration: none;
     color: rgb(63 54 54);
     font-size: 20px;
-    margin-left: 5px;
+    margin-left: 20px;
     border-right: solid 1px rgb(63 54 54);
     padding-right: 3px;
 }
@@ -166,7 +173,7 @@ header nav a:hover {
 }
 
 main {
-    margin-top: 70px;
+    margin: 70px auto 0;
     padding: 25px;
     background: rgb(194 152 152);
 }
@@ -180,11 +187,11 @@ header img {
     font-size: 25px;
 }
 
-.section-text {
+.image-text {
     background-image: url("../images/food_image_2-removebg-preview.png");
     background-repeat: no-repeat;
     height: 250px;
-    background-size: contain;
+    background-size:contain;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -196,9 +203,10 @@ aside h2 {
     padding: 1rem;
 }
 
-.section-text h2 {
+.image-text h2 {
     font-size: 30px;
     color: #fff;
+    margin: auto;
 }
 
 section h3 {
@@ -250,14 +258,15 @@ footer p:nth-of-type(1) {
     color: rgb(70 4 4);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 726px) {
     main {
-        display: flex;
+        height: 100%;
     }
 
     section {
         width: 70%;
         padding: 0;
+        float: left;
     }
 
     aside {
@@ -266,9 +275,10 @@ footer p:nth-of-type(1) {
         padding: 1rem 0;
         border-left: solid 1px rgb(156 128 128);
         border-top: none;
+        float: right;
     }
 
-    .section-text {
+    .image-text {
         width: 500px;
         height: 350px;
         margin: auto;
@@ -276,6 +286,7 @@ footer p:nth-of-type(1) {
 
     header {
         display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: space-between;
     }
